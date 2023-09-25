@@ -2,9 +2,9 @@
     display: flex;
     /* flex-wrap: wrap; */
     /* flex-direction: column-reverse; */
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     /* flex-grow: 1; */
-    justify-content:  space-around;
+    /* justify-content:  space-around; */
 }
 .caja{
     height: 200px;
@@ -15,4 +15,7 @@
     color: white;
     font-size: 72px;
     align-items: center;
+    /* flex-grow: 1; */
+    /* flex-shrink: 3; */
+    /* flex-basis: 1; */
 }

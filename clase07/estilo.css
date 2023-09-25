@@ -1,0 +1,37 @@
+:root {
+    --color-primario: rgb(100,5,150);
+}
+
+div{
+    background-color: var(--color-primario);
+}
+
+p{
+    color: blue !important;
+}
+
+/* .important{
+    color: red !important;
+} */
+
+/* .noImportante{
+    color: blueviolet;
+}
+
+.importante{
+    color: rgba(12, 145, 150, 0.5);
+}
+
+#importante{
+    color: yellow;
+}
+
+div span{
+    color: yellowgreen;
+}
+
+div>span{
+    color: rgba(116, 19, 213,.1);
+} */
+
+

@@ -1,13 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Probando Git</h1>
-    <h2>Otro título</h2>
-    <h3>Tercer título</h3>
-</body>
-</html>
+<?php
+
+        // $data = array('nombre' => 'Juan', 'edad' => 25);
+        // $response = new Response();
+        // $response->setJson($data);
+        // $response->send();
+
+
+        // $json_string = '{"nombre":"Juan","edad":25}';
+        // $data = json_decode($json_string, true);
+
+        // echo $data['nombre'] . "<br>";
+        // echo $data['edad'];
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $data = json_decode(file_get_contents('php://input'), true);
+            header('Content-Type: application/json');
+            echo json_encode(array('message' => 'Datos recibidos', 'data' => $data));
+        }
+
+        header('Content-Type: application/json');
+        echo json_encode(array('message' => 'Bienvenido a mi micro-API'));
+?>

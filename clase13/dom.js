@@ -16,5 +16,10 @@
 // // Añadir el nodo Element como hijo de la pagina
 // document.body.appendChild(parrafo);
 
-var parrafo = document.getElementById("provisional");
-// parrafo.parentNode.removeChild(parrafo);
+// var parrafo = document.getElementById("provisional");
+// // parrafo.parentNode.removeChild(parrafo);
+
+// var enlace = document.getElementById("enlace");
+// // console.log(enlace.href);
+// var imagen = document.getElementById("imagen");
+// console.log(imagen.style.margin);

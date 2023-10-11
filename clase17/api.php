@@ -13,16 +13,20 @@ $host = 'localhost';
     }
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
-    $data = json_decode(file_get_contents('php://input'), true);
+    $request_body = file_get_contents('php://input');
+    $data = json_decode($request_body, true);
+    // $data = json_decode(file_get_contents('php://input'), true);
     // print_r($data);
 
-    if(isset($_POST['nombre'])){
-        $nombre = $_POST['nombre'];
-        // echo $_POST['nombre'];
-    }
-    if(isset($_POST['email'])){
-        $email = $_POST['email'];
-    }
+    $nombre = $data['nombre'];
+    $email = $data['email'];
+    // if(isset($_POST['nombre'])){
+    //     $nombre = $_POST['nombre'];
+    //     // echo $_POST['nombre'];
+    // }
+    // if(isset($_POST['email'])){
+    //     $email = $_POST['email'];
+    // }
     $sql = "INSERT INTO personas(nombre, email) VALUES('$nombre', '$email')";
     // $result = mysqli_query($conn, $query);
 

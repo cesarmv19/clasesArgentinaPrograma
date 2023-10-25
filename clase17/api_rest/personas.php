@@ -25,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Endpoint para crear una nueva persona
     $data = json_decode(file_get_contents('php://input'), true);
+    echo json_encode($data);
     $nombre = $data['nombre'];
     $edad = $data['edad'];
     $sql = "INSERT INTO personas (nombre, edad) VALUES ('$nombre', $edad)";
